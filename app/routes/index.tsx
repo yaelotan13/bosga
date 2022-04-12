@@ -1,6 +1,6 @@
 import { Link } from "remix";
 import { useOptionalUser } from "~/utils";
-import { Banner, Header, ImageBanner } from "../components";
+import { Banner, Header, ImageBanner, CategoriesImages } from "../components";
 
 export default function Index() {
   const user = useOptionalUser();
@@ -10,6 +10,7 @@ export default function Index() {
       <Header />
       <div className="absolute top-28 h-full w-full">
         <ImageBanner />
+        <CategoriesImages />
       </div>
     </main>
   );
