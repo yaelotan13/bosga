@@ -22,7 +22,7 @@ export default function SiteName({}: Props): JSX.Element {
           </svg>
         </button>
       </div>
-      <h1 className="ml-3 font-caveat text-5xl">Bosga</h1>
+      <h1 className="ml-3 font-caveat text-5xl">Bosga Home</h1>
     </div>
   );
 }

@@ -8,8 +8,8 @@ type Props = {};
 
 export default function Header({}: Props): JSX.Element {
   return (
-    <div className="absolute top-9 flex h-[75px] w-full items-center justify-center border-b-2 border-black">
-      <Link to="home">
+    <div className="absolute top-11 flex h-[75px] w-full items-center justify-center border-b-[1px] border-grey-light">
+      <Link to="home" className="mb-6">
         <SiteName />
       </Link>
       <div className="hidden p-3 md:block">
@@ -24,7 +24,7 @@ export default function Header({}: Props): JSX.Element {
           <Link
             key={item.name}
             to={item.link}
-            className="hover:text-gray-500 md:m-3"
+            className="text-text hover:text-gray-500 md:m-3"
           >
             {item.withAnimation ? (
               <BounceAnimation word={item.name} />
@@ -34,7 +34,7 @@ export default function Header({}: Props): JSX.Element {
           </Link>
         ))}
       </div>
-      <HeartIcon className="absolute right-7 h-7 w-7" />
+      <HeartIcon className="absolute right-7 h-7 w-7 cursor-pointer hover:scale-125" />
     </div>
   );
 }
