@@ -9,7 +9,7 @@ export default function Index() {
       <Banner />
       <Header />
       <div className="absolute top-28 h-full w-full">
-        <ImageBanner />
+        {/* <ImageBanner /> */}
         <CategoriesImages />
       </div>
     </main>

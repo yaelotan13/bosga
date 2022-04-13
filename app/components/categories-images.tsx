@@ -1,6 +1,6 @@
 export default function CategoriesImages() {
   return (
-    <div className="grid h-[1200px] w-full grid-cols-2 grid-rows-3 gap-5 bg-slate-200">
+    <div className="grid h-[1200px] w-full grid-cols-2 grid-rows-3 gap-5 p-8">
       <div
         className="row-span-2 flex items-center justify-center rounded-md bg-cover"
         style={{
