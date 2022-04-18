@@ -1,11 +1,12 @@
 import React from "react";
 import { GiftIcon } from "@heroicons/react/solid";
+import { Link } from "remix";
 
 type Props = {};
 
 export default function SiteName({}: Props): JSX.Element {
   return (
-    <div className="absolute left-8 flex h-5 w-1/5 items-center">
+    <div>
       <div className="flex items-center md:hidden">
         <button className="mobile-menu-button outline-none">
           <svg
@@ -22,7 +23,9 @@ export default function SiteName({}: Props): JSX.Element {
           </svg>
         </button>
       </div>
-      <h1 className="ml-3 font-caveat text-5xl">Bosga Home</h1>
+      <Link to="/">
+        <h1 className="ml-3 font-caveat text-4xl">Bosga Home</h1>
+      </Link>
     </div>
   );
 }

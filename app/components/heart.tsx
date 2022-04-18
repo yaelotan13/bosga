@@ -5,19 +5,34 @@ type HeartProps = {
   className?: string;
   withAnimation?: boolean;
   large?: boolean;
+  onSaveProduct?: Function;
+  onRemoveProduct?: Function;
+  heartStartActive?: boolean;
 };
 
 export default function Heart({
   className,
   large,
+  onSaveProduct,
+  onRemoveProduct,
+  heartStartActive = false,
   withAnimation = true,
 }: HeartProps): JSX.Element {
-  const [animate, setAnimate] = useState<boolean>(false);
-  const [saved, setSaved] = useState<boolean>(false);
+  const [animate, setAnimate] = useState<boolean>(heartStartActive);
+  const [saved, setSaved] = useState<boolean>(heartStartActive);
 
   const toggleSaved = () => {
-    setSaved(!saved);
+    const newSavedValue = !saved;
+
+    setSaved(newSavedValue);
     withAnimation && setAnimate(!saved);
+    console.log("-- newSavedValue? ", newSavedValue);
+    if (onSaveProduct && newSavedValue) {
+      onSaveProduct();
+    }
+    if (onRemoveProduct && !newSavedValue) {
+      onRemoveProduct();
+    }
   };
 
   return (

@@ -7,6 +7,8 @@ import Spinner from "./spinner";
 import CategoriesImages from "./categories-images";
 import CategoryTitle from "./category-title";
 import Heart from "./heart";
+import CategoryIcons from "./category-icons";
+import Select from "./select";
 
 export {
   Banner,
@@ -18,4 +20,6 @@ export {
   Spinner,
   CategoriesImages,
   Heart,
+  CategoryIcons,
+  Select,
 };

@@ -168,6 +168,33 @@ async function seed() {
     });
   }
 
+  const tags = [
+    { name: "kitchen" },
+    { name: "decor" },
+    { name: "bedroom" },
+    { name: "bedding" },
+    { name: "bath" },
+    { name: "outdoor" },
+    { name: "nursery" },
+    { name: "bestSellers" },
+    { name: "new" },
+    { name: "furniture" },
+    { name: "blankets" },
+    { name: "plants" },
+    { name: "vases" },
+    { name: "rugs" },
+    { name: "wallArt" },
+    { name: "pillows" },
+    { name: "candles" },
+  ];
+
+  for (let i = 0; i < tags.length; i++) {
+    await prisma.tag.create({
+      data: {
+        name: tags[i].name,
+      },
+    });
+  }
   console.log(`Database has been seeded. 🌱`);
 }
 
