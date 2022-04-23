@@ -4,7 +4,6 @@ import { useState } from "react";
 type HeartProps = {
   className?: string;
   withAnimation?: boolean;
-  large?: boolean;
   onSaveProduct?: Function;
   onRemoveProduct?: Function;
   heartStartActive?: boolean;
@@ -12,7 +11,6 @@ type HeartProps = {
 
 export default function Heart({
   className,
-  large,
   onSaveProduct,
   onRemoveProduct,
   heartStartActive = false,
@@ -26,7 +24,7 @@ export default function Heart({
 
     setSaved(newSavedValue);
     withAnimation && setAnimate(!saved);
-    console.log("-- newSavedValue? ", newSavedValue);
+
     if (onSaveProduct && newSavedValue) {
       onSaveProduct();
     }
@@ -39,10 +37,9 @@ export default function Heart({
     <div
       onClick={toggleSaved}
       className={clsx(
-        "h-[50px] w-[50px] cursor-pointer bg-heart bg-heart-size bg-left bg-no-repeat pt-4 hover:scale-110 hover:bg-right",
+        "h-[50px] w-[50px] cursor-pointer bg-heart bg-heart-size bg-left bg-no-repeat pt-4 hover:bg-right",
         className,
-        animate && "animate-heart-burst",
-        large && "h-[90px] w-[90px]"
+        animate && "animate-heart-burst"
       )}
     />
   );

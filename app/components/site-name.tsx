@@ -7,24 +7,10 @@ type Props = {};
 export default function SiteName({}: Props): JSX.Element {
   return (
     <div>
-      <div className="flex items-center md:hidden">
-        <button className="mobile-menu-button outline-none">
-          <svg
-            className="h-6 w-6 text-gray-500"
-            x-show="!showMenu"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
       <Link to="/">
-        <h1 className="ml-3 font-caveat text-4xl">Bosga Home</h1>
+        <h1 className="ml-3 font-bebas-neue text-5xl font-bold tracking-wider">
+          Bosga Home
+        </h1>
       </Link>
     </div>
   );

@@ -9,6 +9,12 @@ import CategoryTitle from "./category-title";
 import Heart from "./heart";
 import CategoryIcons from "./category-icons";
 import Select from "./select";
+import ChangingBanner from "./changing-banner";
+import CategoriesIcons from "./categories-icons";
+import CurrentTheme from "./current-theme";
+import AboutUs from "./about-us";
+import Footer from "./footer";
+import PopularProducts from "./popular-products";
 
 export {
   Banner,
@@ -22,4 +28,10 @@ export {
   Heart,
   CategoryIcons,
   Select,
+  ChangingBanner,
+  CategoriesIcons,
+  CurrentTheme,
+  AboutUs,
+  Footer,
+  PopularProducts,
 };

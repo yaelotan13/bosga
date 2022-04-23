@@ -17,13 +17,21 @@ module.exports = {
       },
       fontFamily: {
         caveat: ["Caveat", "Oswald", "sans-serif"],
+        "roboto-mono": ["Roboto Mono", "monospace"],
+        "bebas-neue": ["Bebas Neue"],
       },
       backgroundImage: {
         heart:
           "url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png')",
+        flowers: "url('/images/bg/water-color-flowers.jpg')",
+        "hand-drawn-flowers": "url('/images/bg/hand-drawn-flowers.jpg')",
+        summer: "url('/images/bg/summer.jpg')",
       },
       backgroundSize: {
         "heart-size": "2900%",
+      },
+      hight: {
+        100: "30rem",
       },
       keyframes: {
         "dot-bounce": {
@@ -51,5 +59,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

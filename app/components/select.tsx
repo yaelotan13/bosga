@@ -1,9 +1,12 @@
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
+import { Link } from "remix";
 
 type SelectType = {
   name: string;
+  from: string;
+  to: string;
 };
 
 type SelectProps = {
@@ -44,7 +47,7 @@ export default function Select({ selects }: SelectProps) {
                   value={select}
                 >
                   {({ selected }) => (
-                    <>
+                    <Link to={`?from=${select.from}&to=${select.to}`}>
                       <span
                         className={`block truncate ${
                           selected ? "font-medium" : "font-normal"
@@ -57,7 +60,7 @@ export default function Select({ selects }: SelectProps) {
                           <CheckIcon className="h-5 w-5" aria-hidden="true" />
                         </span>
                       ) : null}
-                    </>
+                    </Link>
                   )}
                 </Listbox.Option>
               ))}

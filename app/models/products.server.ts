@@ -1,16 +1,56 @@
 import { prisma } from "~/db.server";
 
-export function getProducts() {
-  return prisma.product.findMany();
+export function getProducts(
+  category?: string,
+  subCategory: string | undefined = undefined,
+  from: string = "0",
+  to: string = "100000000"
+) {
+  return prisma.product.findMany({
+    where: {
+      OR: [
+        {
+          tags: {
+            some: {
+              tag: {
+                name: category,
+              },
+            },
+          },
+        },
+        {
+          tags: {
+            some: {
+              tag: {
+                name: subCategory,
+              },
+            },
+          },
+        },
+      ],
+      AND: [
+        {
+          price: {
+            gte: parseFloat(from),
+          },
+        },
+        {
+          price: {
+            lte: parseFloat(to),
+          },
+        },
+      ],
+    },
+  });
 }
 
-export function getProductsByCategory(category) {
+export async function getPopularProducts() {
   return prisma.product.findMany({
     where: {
       tags: {
         some: {
-          name: {
-            contains: category,
+          tag: {
+            name: "popular",
           },
         },
       },

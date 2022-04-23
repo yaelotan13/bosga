@@ -17,7 +17,7 @@ export const links: LinksFunction = () => {
     { rel: "stylesheet", href: tailwindStylesheetUrl },
     {
       rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Oswald:wght@200;300;400;500&display=swap",
+      href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600&family=Oswald:wght@200;300;400;500&family=Roboto+Mono:wght@100;200;400;500;600;700&display=swap",
     },
   ];
 };
